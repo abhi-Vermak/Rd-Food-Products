@@ -1,132 +1,166 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.navbar{
-    height: 65px;
-    width: 100%;
-    padding-left: 10px;
-    background-color: #fff;
-    display: flex;
-    box-shadow: 0px 0px 5px #000;
-    font-family: "roboto";
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+body {
+  width: 100vw;
+}
+/* Navbar */
+.navbar {
+  position: relative;
+  background: #fff;
+  box-shadow: 0px 0px 3px #000;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.logo{
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    list-style: none;
-   
-}
-.logo img{
-    height: 60px;
+.navbar .logo .logoImg {
+  height: 60px;
 }
 
-.logo button {
+/* List Items */
+
+.navbarItems {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0px;
+  right: -300px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0px 0px 3px #000;
+  height: 100vh;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbarItems.visible {
+  right: 0px;
+}
+.navbarItems .itemList {
+  margin: 30px;
+}
+
+.itemList .item {
+  list-style-type: none;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 10px;
+  transition: all 0.1s ease-in;
+}
+
+.itemList .item:hover {
+  color: #ed3338;
+}
+
+
+/* Other Navbar Items */
+.otherItems {
+  display: flex;
+  gap: 15px;
+  margin: 5px auto;
+}
+.otherItems li {
+  list-style-type: none;
+  font-size: 25px;
+  font-weight: 500;
+  transition: all 0.1s ease-in;
+}
+.otherItems li:hover {
+    color: #ed3338;
+  }
+
+/* Menu Button */
+.menu {
+  position: absolute;
+  margin-right: 25px;
+  background: transparent;
+  border: none;
+  outline: none;
+  top: 20px;
+  right: 15px;
+}
+
+.menu.show {
+  display: none;
+}
+
+.menu i {
+  font-size: 25px;
+}
+
+/* Cut Button */
+.cutButton {
+  position: absolute;
+  top: 20px;
+  right: 200px;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
     display: none;
-}
+  }
+  .cutButton {
+    display: none;
+  }
 
-
-/* Li items */
-.itemList{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
- .items{
-    list-style: none;
-    font-size: 20px;
-    font-weight: 400;
-    font-family: "roboto";
-    cursor: pointer;
-    padding: 10px;
-    transition: color 0.1s ease-in-out;
-}
-
-.items:hover{
-   color: #EF3238;
-}
-/* RightSide Items */
-.rightSide{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 2px;
-    margin-right: 10px;
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.rightSide li{
-    list-style: none;
-    margin:5px;
-}
-
-.searchBox{
-    display: flex;
-    align-items: center;
-    background: #f1f3f6;
-    padding: 10px;
-    border-radius: 15px;
-  
-}
-
-.searchBox input{
-    border: none;
-    outline: none;
+  .navbarItems {
+    right: 0px;
+    flex-direction: row;
     background: transparent;
+    box-shadow: none;
+  }
+
+  .navbarItems .itemList {
+    display: flex;
+    gap: 0px;
     font-size: 15px;
+  }
+
+  .navbarItems .itemList {
+    margin: 0px;
+  }
+
+  .itemList .item {
+    list-style-type: none;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 5px;
+  }
+  .otherItems {
+    margin-left: 20px;
+  }
+  .otherItems li {
+    font-size: 18px;
+  }
 }
 
-@media screen and (max-width: 600px) {
-    /* Styles for screens with a maximum width of 600 pixels */
-    .itemList{
-        flex-direction: column;
-        max-width: 600px;
-        min-width: 100%;
-        position: absolute;
-        top: 20px;
-        right:-200px;
-        background: #ffffff83;
-        align-items: last baseline  
-    }
 
-    .itemList.visible{
-       right: 0px;
-    }
-    .rightSide{
-    flex-direction: column;      
-    }
-   
-    .logo button{
-        display: block;
-        position: absolute;
-        top: 25px;
-        right: 40px;
-    }
-    .searchBox{
-        width:120px;
-    }
-
-    .searchBox input{
-        width: 50%;
-        margin-right: 10px;
-    }
-
+/* Media query for desktop screens (992px and above) */
+@media screen and (min-width: 992px) {
+ 
     
 }
   
-
-
+  /* Media query for large desktop screens (1200px and above) */
+  @media screen and (min-width: 1200px) {
+    body {
+      font-size: 22px;
+      /* adjust other styles for large desktop screens */
+    }
   
-  /* Media query with multiple conditions */
-  @media (min-width: 600px) and (max-width: 1200px) {
-    /* Styles for screens with a width between 600 and 1200 pixels */
+    /* Additional styles for large desktop screens */
+    .container {
+      width: 60%;
+      /* adjust other styles */
+    }
+  
+    /* Add more rules as needed for large desktop screens */
   }
