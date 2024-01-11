@@ -1,0 +1,11 @@
+.itemContainer {
+    /* width: 200px ; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.itemContainer img{
+    height: 300px;
+    width: auto;
+}

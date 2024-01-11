@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import "./navbar.css";
 
-export default function () {
+export default function Navbar () {
     const [menu ,setMenu] = useState(null);
     const[menuButton, setMenuButton] = useState(null);
 

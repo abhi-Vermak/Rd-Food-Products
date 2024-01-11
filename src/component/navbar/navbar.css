@@ -5,7 +5,7 @@
 }
 
 body {
-  width: 100vw;
+  width: 100%;
 }
 /* Navbar */
 .navbar {
@@ -50,6 +50,7 @@ body {
   font-size: 20px;
   margin: 10px;
   transition: all 0.1s ease-in;
+  cursor: pointer;
 }
 
 .itemList .item:hover {
@@ -60,14 +61,15 @@ body {
 /* Other Navbar Items */
 .otherItems {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   margin: 5px auto;
 }
 .otherItems li {
   list-style-type: none;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 500;
   transition: all 0.1s ease-in;
+  cursor: pointer;
 }
 .otherItems li:hover {
     color: #ed3338;
@@ -103,7 +105,7 @@ body {
   font-size: 20px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .menu {
     display: none;
   }
@@ -131,14 +133,17 @@ body {
   .itemList .item {
     list-style-type: none;
     font-weight: 500;
-    font-size: 18px;
-    margin: 5px;
+    font-size: 20px;
+    margin: 0px 10px;
   }
   .otherItems {
-    margin-left: 20px;
+    margin-left: 40px;
+    padding: 0;
   }
   .otherItems li {
-    font-size: 18px;
+    margin-top: 0px;
+    padding: 0px;
+    font-size: 20px;
   }
 }
 
