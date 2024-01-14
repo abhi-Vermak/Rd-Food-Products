@@ -1,7 +1,12 @@
 .productContainer {
+  margin-top: 10px;
   display: flex;
   align-items: center;
-  width: 300px;
-  height: 400px;
-  background: #bfff;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background: #D70005;
+  box-shadow: 0px 0px 5px #000;
+  
 }
+
